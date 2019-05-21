@@ -233,6 +233,7 @@
     <Content Include="Views\Asesoria\CrearAsesoria.cshtml" />
     <Content Include="Views\Asesoria\EncontrarAsesoria.cshtml" />
     <Content Include="Views\Monitor\EncontrarMonitor.cshtml" />
+    <Content Include="Views\Asesoria\EliminarAsesoria.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

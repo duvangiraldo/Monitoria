@@ -20,13 +20,19 @@ namespace ProyectoMonitores.Controllers
 
         public ActionResult CrearCurso(Curso curso)
         {
-            if (ModelState.IsValid)
-            {
-                db.Curso.Add(curso);
-                db.SaveChanges();
+            
 
-                
-            }
+           
+
+                if (ModelState.IsValid)
+                {
+                    db.Curso.Add(curso);
+                    db.SaveChanges();
+
+
+                }
+
+            
            
 
            
@@ -53,7 +59,8 @@ namespace ProyectoMonitores.Controllers
             }
             catch (Exception ex)
             {
-
+                //throw (ex);
+                return RedirectToAction("Index");
             }
             return RedirectToAction("Index");
         }

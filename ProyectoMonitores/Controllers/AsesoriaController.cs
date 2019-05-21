@@ -34,7 +34,25 @@ namespace ProyectoMonitores.Controllers
         {
             
 
-            return View(db.Curso.Where(x => x.idCurso == id).ToList());
+            return View(db.Asesoria.Where(x => x.idMonitor == id).ToList());
+        }
+
+        public ActionResult EliminarAsesoria(int id)
+        {
+            try
+            {
+                Asesoria asesoria = db.Asesoria.Find(id);
+                db.Asesoria.Remove(asesoria);
+                db.SaveChanges();
+            }
+            catch (Exception ex)
+            {
+                //throw (ex);
+                return RedirectToAction("EliminarAsesoria");
+            }
+            return RedirectToAction("Index");
         }
     }
+
+   
 }

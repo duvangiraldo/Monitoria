@@ -16,6 +16,7 @@
         <td>@Html.DisplayFor(modelItem => item.Monitor.nombreMonitor)</td>
         <td>@Html.DisplayFor(modelItem => item.fecha)</td>
         <td>@Html.DisplayFor(modelItem => item.aula)</td>
+        <td>@Html.ActionLink("Borrar", "EliminarAsesoria", new { id = item.idAsesoria })</td>
     </tr>
 
 
