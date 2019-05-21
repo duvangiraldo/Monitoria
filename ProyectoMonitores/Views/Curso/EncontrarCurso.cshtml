@@ -1,0 +1,20 @@
+﻿
+@{
+    ViewBag.Title = "EncontrarCurso";
+}
+
+<h2>EncontrarCurso</h2>
+
+@model ProyectoMonitores.Models.Curso
+
+
+<table>
+    <tr>
+        <td>
+            @Html.DisplayFor(model => model.nombreCurso)
+        </td>
+        <td>
+            @Html.DisplayFor(model => model.horasEstudio)
+        </td>
+    </tr>
+</table>
