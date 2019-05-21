@@ -32,10 +32,9 @@ namespace ProyectoMonitores.Controllers
 
         public ActionResult EncontrarAsesoria(int id)
         {
+            
 
-            IEnumerable<Asesoria> asesorias=db.Curso.Where(x= > XmlSiteMapProvider.)
-
-            return View(curso);
+            return View(db.Curso.Where(x => x.idCurso == id).ToList());
         }
     }
 }

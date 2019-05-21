@@ -1,0 +1,22 @@
+﻿
+@{
+    ViewBag.Title = "EncontrarMonitor";
+}
+
+<h2>EncontrarMonitor</h2>
+
+@model IEnumerable<ProyectoMonitores.Models.Monitor>
+<table border="1">
+
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@Html.DisplayFor(modelItem => item.nombreMonitor)</td>
+            <td>@Html.DisplayFor(modelItem => item.correo)</td>
+            <td>@Html.DisplayFor(modelItem => item.Curso.nombreCurso)</td>
+        </tr>
+    }
+
+
+</table>

@@ -26,6 +26,12 @@ namespace ProyectoMonitores.Controllers
             return View(monitor);
         }
 
+        public ActionResult EncontrarMonitor(int  id)
+        {
+
+            return View(db.Monitor.Where(x => x.idCurso == id).ToList());
+        }
+
        
 
        
