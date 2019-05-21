@@ -1,0 +1,29 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+@model IEnumerable<ProyectoMonitores.Models.Asesoria>
+<table border="1">
+
+
+    @foreach (var item in Model)
+    {
+    <tr>
+        <td>@Html.DisplayFor(modelItem => item.Curso.nombreCurso)</td>
+        <td>@Html.DisplayFor(modelItem => item.Monitor.nombreMonitor)</td>
+        <td>@Html.DisplayFor(modelItem => item.fecha)</td>
+        <td>@Html.DisplayFor(modelItem => item.aula)</td>
+    </tr>
+
+
+
+
+
+    }
+
+
+</table>
+

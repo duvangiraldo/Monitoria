@@ -1,0 +1,35 @@
+﻿
+@{
+    ViewBag.Title = "CrearMonitor";
+}
+
+@model ProyectoMonitores.Models.Monitor
+
+
+
+
+@using (Html.BeginForm())
+{
+    <div class="form-group">
+
+        <div>
+            @Html.EditorFor(model => model.nombreMonitor)
+        </div>
+        <div>
+            @Html.EditorFor(model => model.correo)
+        </div>
+        <div>
+            
+            <div>
+                @Html.DropDownList("idCurso");
+            </div>
+        </div>
+        <div>
+            <input type="submit" value="Agregar Monitor" />
+            <input type="reset" value="Borrar" />
+        </div>
+        <div></div>
+    </div>
+
+
+}

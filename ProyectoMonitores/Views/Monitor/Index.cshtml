@@ -5,4 +5,27 @@
 
 <h2>Index</h2>
 
-<p>Esta es una nueva vista </p>
+
+
+@model IEnumerable<ProyectoMonitores.Models.Monitor>
+<table border="1">
+
+
+    @foreach (var item in Model)
+    {
+    <tr>
+        <td>@Html.DisplayFor(modelItem => item.nombreMonitor)</td>
+        <td>@Html.DisplayFor(modelItem => item.correo)</td>
+        <td>@Html.DisplayFor(modelItem => item.Curso.nombreCurso)</td>
+    </tr>
+
+
+
+
+
+    }
+
+
+</table>
+
+

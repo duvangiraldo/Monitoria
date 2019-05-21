@@ -1,0 +1,41 @@
+﻿
+@{
+    ViewBag.Title = "CrearAsesoria";
+}
+
+<h2>CrearAsesoria</h2>
+@model ProyectoMonitores.Models.Asesoria
+@using (Html.BeginForm())
+{
+<div class="form-group">
+
+    <div>
+        Curso Monitoria:
+        <div>
+            @Html.DropDownList("idCurso")
+        </div>
+    </div>
+    <div>
+        Nombre Monitor: 
+        <div>
+            @Html.DropDownList("idMonitor")
+        </div>
+    </div> 
+    <div>
+        Aula monitoria:
+        @Html.EditorFor(model => model.aula)
+    </div>
+    <div>
+        Fecha Monitoria:
+        @Html.EditorFor(model => model.fecha)
+    </div>
+    <div>
+        <input type="submit" value="Agregar Monitoria" />
+        <input type="reset" value="Borrar" />
+    </div>
+    <div></div>
+</div>
+
+
+}
+

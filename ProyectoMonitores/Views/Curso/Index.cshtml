@@ -9,16 +9,20 @@
 <table border="1">
 
 
-    @foreach(var item in Model)
+    @foreach (var item in Model)
     {
-      <tr>
-          <td>@Html.DisplayFor(modelItem => item.nombreCurso)</td>
-          <td>@Html.DisplayFor(modelItem => item.horasEstudio)</td>
-      </tr>
-     
+        <tr>
+            <td>@Html.DisplayFor(modelItem => item.nombreCurso)</td>
+            <td>@Html.DisplayFor(modelItem => item.horasEstudio)</td>
+        </tr>
+
+
+
 
 
     }
 
 
 </table>
+
+
